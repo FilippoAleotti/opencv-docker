@@ -1,4 +1,4 @@
-ARG base_container=ubuntu:18.04
+ARG base_container=ubuntu:16.04
 FROM $base_container
 USER root
 
@@ -18,6 +18,20 @@ RUN if $build_dependences ; then \
     libswscale-dev libavdevice-dev \
     libdc1394-22-dev libraw1394-dev \
     libjpeg-dev libtiff5-dev \
+    libgtk2.0-dev \  
+    libfreetype6-dev \
+    libfontconfig \
+    libglib2.0-0 \
+    libgtk2.0-0 \
+    libpango-1.0.0 \
+    libpangoft2-1.0 \
+    libgdk-pixbuf2.0-0 \
+    libcairo2-dev \
+    libatk-adaptor \
+    libpangocairo-1.0-0 \
+    libx11-dev \
+    libtbb-dev \
+    libpng-dev \
     libopenexr-dev \
     libboost-all-dev libpcap-dev libssl-dev g++ ;\
     ldconfig ;\
